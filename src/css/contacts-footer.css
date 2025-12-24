@@ -84,9 +84,9 @@ body{
 }
 
 @media screen and (min-width: 768px) {
-  .container-with-other-padding{
-    min-width: 768px;
-  }
+  /* .container-with-other-padding{
+   max-width: 768px;
+  } */
     .section-contacts{
       justify-content: space-between;
       flex-direction: row; 
@@ -117,10 +117,10 @@ body{
 @media screen and (min-width: 1440px){
 .container-with-other-padding{
   padding: 0 182px  0 182px ;
-    min-width: 1440px;
+   /* max-width: 1440px; */
 }
 .section-contacts{
-    padding: 120pxpx 0 120px 0;
+    padding: 120px 0 120px 0;
 }
 
 .wrapper-section-contacts{
@@ -128,7 +128,7 @@ body{
 }
 
  .user-form-section-contacts {
-   width: 526px;
+   max-width: 526px;
  }
 
 }
