@@ -197,7 +197,9 @@
   flex-direction: column;
 }
 
-.logo-footer{
+.footer-logo {
+  display: inline-block;
+  max-height: 40px;
   margin-bottom: 32px;
 }
 
@@ -205,6 +207,15 @@
   display: flex;
   gap: 16px;
   margin-bottom: 48px;
+}
+
+.item-footer {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-item-link {
+  display: inline-block;
 }
 
 .footer-text{
