@@ -1,9 +1,15 @@
-
+.section-contacts {
+  padding: 48px 0;
+}
 
 .container-with-other-padding {
   display: flex;
   flex-direction: column;
-  padding: 48px 20px 48px 20px;
+  padding: 0 20px;
+}
+
+.wrapper-section-contacts {
+  margin-bottom: 48px;
 }
 
 .title-section-contacts {
@@ -32,7 +38,6 @@
   color: #fff;
   gap: 40px;
    max-width: 320px;
-   margin-top: 48px;
 }
 
 .label-section-contacts {
@@ -54,6 +59,7 @@
     line-height: 2;
     letter-spacing: 0.04em;
     padding-left: 16px;
+  padding-right: 16px;
     color: #FFFFFF;
     transition: border 0, 3;
 }
@@ -84,6 +90,7 @@
     line-height: 2;
     letter-spacing: 0.04em;
     padding-left: 16px;
+  padding-right: 16px;
     color: #FFFFFF;
     transition: border 0,3;
 }
@@ -104,6 +111,7 @@
 }
 
 .button-section-contacts {
+  font-family: "Sen", sans-serif;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -176,18 +184,18 @@
  }
 
 }
-.connainer-footer{
-  padding: 48px 20px 48px 20px;
+
+.footer {
+  background-color: #181823;
+  padding: 48px 0;
+}
+
+.connainer-footer {
+  padding: 0 20px;
   /* background-color: #181823; */
   display: flex;
   flex-direction: column;
 }
-
-.footer{
-  background-color: #181823;
-}
-
-
 
 .logo-footer{
   margin-bottom: 32px;
