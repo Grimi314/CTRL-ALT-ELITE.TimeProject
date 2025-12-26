@@ -69,6 +69,7 @@
 }
 
 .input-section-contacts::placeholder{  
+    font-family: 'Sen', sans-serif;
   font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
@@ -95,6 +96,7 @@
 }
 
 .user-comments-section-contacts::placeholder {
+    font-family: 'Sen', sans-serif;
   text-align: start;
   
   font-size: 12px;
