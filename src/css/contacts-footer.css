@@ -5,7 +5,6 @@
 .container-with-other-padding {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
 }
 
 .wrapper-section-contacts {
@@ -37,7 +36,7 @@
   line-height: 1.5;
   color: #fff;
   gap: 40px;
-   max-width: 320px;
+   min-width: 320px;
 }
 
 .label-section-contacts {
@@ -140,13 +139,14 @@
 }
 
 @media screen and (min-width: 768px) {
+ .section-contacts {
+    padding: 80px 0;
+  }
 
-    .container-with-other-padding{
-      justify-content: space-between;
-      flex-direction: row; 
-      column-gap: 24px;
-      padding: 80px 40px 80px 40px;
-    }
+  .container-with-other-padding {
+    flex-direction: row;
+    column-gap: 24px;
+  }
 
   .title-section-contacts {
      font-size: 55px;
@@ -160,7 +160,7 @@
    }
   
   .user-form-section-contacts{
-    width: 332px;
+    min-width: 332px;
   }
   
  
@@ -169,10 +169,13 @@
 
 
 @media screen and (min-width: 1440px){
-.container-with-other-padding{
-  padding: 120px 182px 120px 182px ;
-   /* max-width: 1440px; */
-}
+.section-contacts {
+    padding: 120px 0;
+  }
+
+  .container {
+    padding: 0 182px;
+  }
 
 
 .wrapper-section-contacts{
@@ -180,8 +183,8 @@
 }
 
  .user-form-section-contacts {
-   width: 526px;
- }
+    min-width: 526px;
+  }
 
 }
 
@@ -191,7 +194,6 @@
 }
 
 .connainer-footer {
-  padding: 0 20px;
   /* background-color: #181823; */
   display: flex;
   flex-direction: column;
@@ -223,13 +225,19 @@
     font-size: 16px;
     line-height: 1.5;
     color: #8491a0;
+  max-width: 320px;
 }
 
-.nav-list-footen{
+.nav-list-footen {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   gap: 16px;
+  max-width: 154px;
   margin-bottom: 48px;
+}
+
+.footer-nav-link {
+  display: inline-block;
 }
 
 .text-list-footer{
@@ -240,13 +248,14 @@
 }
 
 @media screen and (min-width: 768px){
-.connainer-footer{
-  padding: 80px 40px 80px 40px;
- }
+ .footer {
+    padding: 80px 0 56px 0;
+  }
+  .connainer-footer {
+  }
 
-  .wrappere-footer{
+  .wrappere-footer {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 46px;
   }
   
@@ -264,12 +273,16 @@
 
 
 @media screen and (min-width: 1440px) {
- .connainer-footer {
-    padding: 80px 182px 80px 72px;
+  .footer {
+    padding: 80px 0;
   }
 
-  .wrappere-footer {
-    margin-bottom: 72px;
+  .container {
+    padding: 0px 72px;
+  }
+
+    .wrappere-footer {
+    margin-bottom: 46px;
   }
 
   .nav-list-footen {
