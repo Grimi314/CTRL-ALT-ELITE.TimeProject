@@ -1,3 +1,15 @@
+.feedbacks-section {
+  background-color: #181823;
+}
+
 .feedbacks-comment {
-  font-family: Se;
+  font-family: 'Sen', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.feedbacks-comment-quote {
+  font-family: 'Bahnschrift', sans-serif;
+  font-weight: 400;
 }
