@@ -63,7 +63,8 @@
     transition: border 0, 3;
 }
 
-.input-section-contacts:active{
+.input-section-contacts:active, 
+.input-section-contacts:focus{
  border: 1px solid #5221e6;
   
 }
@@ -92,13 +93,13 @@
     padding-left: 16px;
   padding-right: 16px;
     color: #FFFFFF;
+    font-family: 'Sen', sans-serif;
     transition: border 0,3;
 }
 
 .user-comments-section-contacts::placeholder {
-    font-family: 'Sen', sans-serif;
+
   text-align: start;
-  
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
@@ -106,10 +107,14 @@
   color: #FFFFFF;
 }
 
-.user-comments-section-contacts:active {
+.user-comments-section-contacts:active,
+ .user-comments-section-contacts:focus {
   border: 1px solid #5221e6;
 
 }
+
+
+ 
 
 .button-section-contacts {
   font-family: "Sen", sans-serif;
@@ -136,8 +141,12 @@
 }
 
 .button-section-contacts:active{
-  border: 1px solid #113916;
+  border: 1px solid #160448;
     opacity: 0.6;
+}
+
+.button-section-contacts:hover {
+  background: #633ed4;
 }
 
 @media screen and (min-width: 768px) {
@@ -148,6 +157,7 @@
   .container-with-other-padding {
     flex-direction: row;
     column-gap: 24px;
+    justify-content: center;
   }
 
   .title-section-contacts {
@@ -175,7 +185,7 @@
     padding: 120px 0;
   }
 
-  .container {
+  .container-with-other-padding {
     padding: 0 182px;
   }
 
@@ -234,7 +244,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-width: 154px;
+  width: 154px;
   margin-bottom: 48px;
 }
 
@@ -244,24 +254,23 @@
   font-size: 16px;
   line-height: 1.5;
   color: #fff;
+  font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
 }
 
-.text-list-footer{
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #fff;
-}
+
 
 @media screen and (min-width: 768px){
  .footer {
     padding: 80px 0 56px 0;
   }
-  .connainer-footer {
-  }
+
 
   .wrappere-footer {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 46px;
   }
   
@@ -283,9 +292,11 @@
     padding: 80px 0;
   }
 
-  .container {
-    padding: 0px 72px;
-  }
+  .container-footer {
+  padding: 0 172px 0 72px;
+}
+
+  
 
     .wrappere-footer {
     margin-bottom: 46px;

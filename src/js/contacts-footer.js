@@ -2,8 +2,6 @@
 
 const userForm = document.querySelector('.user-form-section-contacts');
 
-userForm.addEventListener('input', handleInput);
-
 const userData = {
   userName: '',
   userEmail: '',
@@ -11,14 +9,17 @@ const userData = {
 };
 
 const saveData = localStorage.getItem('userFormData');
-if (saveData) {
-  userData.userName = saveData.userName || '';
-  userData.userEmail = saveData.userEmail || '';
-  userData.userComments = saveData.userComments || '';
 
-  userForm.elements.name.value = saveData.userName || '';
-  userForm.elements.email.value = saveData.userEmail || '';
-  userForm.elements.comments.value = saveData.userComments || '';
+if (saveData) {
+  const parsedData = JSON.parse(saveData);
+
+  userData.userName = parsedData.userName || '';
+  userData.userEmail = parsedData.userEmail || '';
+  userData.userComments = parsedData.userComments || '';
+
+  userForm.elements.name.value = parsedData.userName || '';
+  userForm.elements.email.value = parsedData.userEmail || '';
+  userForm.elements.comments.value = parsedData.userComments || '';
 }
 
 userForm.addEventListener('input', handleInput);
@@ -38,7 +39,7 @@ function handleInput(event) {
 userForm.addEventListener('submit', handleSubmite);
 
 function handleSubmite(event) {
-  event.prevetnDefault();
+  event.preventDefault();
   if (
     userForm.elements.name.value === '' ||
     userForm.elements.email.value === '' ||
