@@ -108,47 +108,66 @@
       Here is a collection of my best travel pictures that I took while
       travelling places all around the world.
     </p>
-    <ul class="gallery-list-order">
+    <ul class="gallery-list-order" id="gallery-options">
       <li class="gallery-order-item">
-        <button class="gallery-order-button" type="button">italy</button>
+        <button
+          class="gallery-order-button gallery-button-active"
+          type="button"
+          data-country="italy"
+        >
+          italy
+        </button>
       </li>
       <li class="gallery-order-item">
-        <button class="gallery-order-button" type="button">australia</button>
+        <button
+          class="gallery-order-button"
+          type="button"
+          data-country="australia"
+        >
+          australia
+        </button>
       </li>
       <li class="gallery-order-item">
-        <button class="gallery-order-button" type="button">india</button>
+        <button class="gallery-order-button" type="button" data-country="india">
+          india
+        </button>
       </li>
       <li class="gallery-order-item">
-        <button class="gallery-order-button" type="button">brazil</button>
+        <button
+          class="gallery-order-button"
+          type="button"
+          data-country="brazil"
+        >
+          brazil
+        </button>
       </li>
     </ul>
     <ul class="gallery-list-photos">
       <li class="gallery-photos-item">
         <picture
           ><source
-            class="gallery-pic-first-desk"
+            class="gallery-firstpic-desk"
             media="(min-width: 1440px)"
             srcset="
               /img/feedbacs-gallery/gallery/italy/italy-first-desktop.webp    1x,
               /img/feedbacs-gallery/gallery/italy/italy-first-desktop-2x.webp 2x
             " />
           <source
-            class="gallery-pic-first-tablet"
+            class="gallery-firstpic-tablet"
             media="(min-width: 768px)"
             srcset="
               /img/feedbacs-gallery/gallery/italy/italy-first-tablet.webp    1x,
               /img/feedbacs-gallery/gallery/italy/italy-first-tablet-2x.webp 2x
             " />
           <source
-            class="gallery-pic-first-mobile"
+            class="gallery-firstpic-mobile"
             media="(max-width: 767px)"
             srcset="
               /img/feedbacs-gallery/gallery/italy/italy-first-mobile.webp    1x,
               /img/feedbacs-gallery/gallery/italy/italy-first-mobile-2x.webp 2x
             " />
           <img
-            class="gallery-pic-first-main"
-            class="gallery-italy-picture"
+            class="gallery-firstpic-main"
             src="/img/feedbacs-gallery/gallery/italy/italy-first-desktop.webp"
             alt="italy alley"
             loading="lazy"
@@ -157,7 +176,7 @@
       <li class="gallery-photos-item">
         <picture>
           <source
-            class="gallery-pic-second-desk"
+            class="gallery-secondpic-desk"
             media="(min-width: 1440px)"
             srcset="
               /img/feedbacs-gallery/gallery/italy/italy-second-desktop.webp    1x,
@@ -165,7 +184,7 @@
             "
           />
           <source
-            class="gallery-pic-second-tablet"
+            class="gallery-secondpic-tablet"
             media="(min-width: 768px)"
             srcset="
               /img/feedbacs-gallery/gallery/italy/italy-second-tablet.webp    1x,
@@ -173,7 +192,7 @@
             "
           />
           <source
-            class="gallery-pic-second-mobile"
+            class="gallery-secondpic-mobile"
             media="(max-width: 767px)"
             srcset="
               /img/feedbacs-gallery/gallery/italy/italy-second-mobile.webp    1x,
@@ -181,8 +200,7 @@
             "
           />
           <img
-            class="gallery-pic-second-main"
-            class="gallery-italy-picture"
+            class="gallery-secondpic-main"
             alt="venice gondola"
             src="/img/feedbacs-gallery/gallery/italy/italy-second-desktop.webp"
             loading="lazy"
@@ -192,7 +210,7 @@
       <li class="gallery-photos-item">
         <picture>
           <source
-            class="gallery-pic-third-desk"
+            class="gallery-thirdpic-desk"
             media="(min-width: 1440px)"
             srcset="
               /img/feedbacs-gallery/gallery/italy/italy-third-desktop.webp    1x,
@@ -200,7 +218,7 @@
             "
           />
           <source
-            class="gallery-pic-third-tablet"
+            class="gallery-thirdpic-tablet"
             media="(min-width: 768px)"
             srcset="
               /img/feedbacs-gallery/gallery/italy/italy-third-tablet.webp    1x,
@@ -208,7 +226,7 @@
             "
           />
           <source
-            class="gallery-pic-third-mobile"
+            class="gallery-thirdpic-mobile"
             media="(max-width: 767px)"
             srcset="
               /img/feedbacs-gallery/gallery/italy/italy-third-mobile.webp    1x,
@@ -216,8 +234,7 @@
             "
           />
           <img
-            class="gallery-pic-third-main"
-            class="gallery-italy-picture"
+            class="gallery-thirdpic-main"
             alt="italy caffee"
             src="/img/feedbacs-gallery/gallery/italy/italy-third-desktop.webp"
             loading="lazy"
@@ -227,7 +244,7 @@
       <li class="gallery-photos-item">
         <picture>
           <source
-            class="gallery-pic-fourth-desk"
+            class="gallery-fourthpic-desk"
             media="(min-width: 1440px)"
             srcset="
               /img/feedbacs-gallery/gallery/italy/italy-fourth-desktop.webp    1x,
@@ -235,7 +252,7 @@
             "
           />
           <source
-            class="gallery-pic-fourth-tablet"
+            class="gallery-fourthpic-tablet"
             media="(min-width: 768px)"
             srcset="
               /img/feedbacs-gallery/gallery/italy/italy-fourth-tablet.webp    1x,
@@ -243,7 +260,7 @@
             "
           />
           <source
-            class="gallery-pic-fourth-mobile"
+            class="gallery-fourthpic-mobile"
             media="(max-width: 767px)"
             srcset="
               /img/feedbacs-gallery/gallery/italy/italy-fourth-mobile.webp    1x,
@@ -251,9 +268,8 @@
             "
           />
           <img
-            class="gallery-pic-fourth-main"
-            class="gallery-italy-picture"
-            alt="italy mountain"
+            class="gallery-fourthpic-main"
+            alt="italy mountains"
             src="/img/feedbacs-gallery/gallery/italy/italy-fourth-desktop.webp"
             loading="lazy"
           />
