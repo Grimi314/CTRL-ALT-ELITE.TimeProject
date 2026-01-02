@@ -1,0 +1,225 @@
+/* values.css */
+/* Philosophy & Values Section - FIX ORDER */
+
+/* 1. ГЛОБАЛЬНЫЙ ФИКС */
+.philosophy-section * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+.philosophy-section,
+.philosophy-content,
+.philosophy-left,
+.philosophy-right,
+.container {
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. СЕКЦИЯ */
+.philosophy-section {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+/* 3. КОНТЕЙНЕР ДЛЯ ДВУХ КОЛОНОК */
+.philosophy-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== ЛЕВАЯ КОЛОНКА ===== */
+.philosophy-left {
+  flex: 0 0 50%;
+  width: 50%;
+  height: 100%;
+  background-color: #fff3e4;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+/* ===== ПРАВАЯ КОЛОНКА ===== */
+.philosophy-right {
+  flex: 0 0 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.values-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== ТИПОГРАФИЯ ===== */
+.philosophy-title {
+  font-family: 'Sen', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 100%;
+  color: #1a1a1a;
+  margin: 0 0 40px 0;
+  max-width: 100%;
+}
+
+.philosophy-description {
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #333333;
+  margin: 0;
+  max-width: 100%;
+}
+
+.philosophy-link {
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #1a1a1a;
+  text-decoration: none;
+  display: block;
+  position: absolute;
+  top: 480px;
+  left: 72px;
+  width: 116px;
+  padding-bottom: 8px;
+  cursor: pointer;
+  margin-top: 134px;
+}
+
+.philosophy-link::after {
+  content: '';
+  position: absolute;
+  width: 116px;
+  height: 0;
+  top: 100%;
+  left: 0;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+
+/* Планшеты (1024px и меньше) - ТОЧКА ПЕРЕЛОМА */
+@media (max-width: 1024px) {
+  .philosophy-content {
+    flex-direction: column;
+  }
+
+  /* КАРТИНКА СНИЗУ - убрали order: -1 */
+  .philosophy-left {
+    flex: none;
+    width: 100%;
+    height: 50vh;
+    min-height: 400px;
+    padding: 60px;
+    /* Порядок по умолчанию (текст сверху) */
+  }
+
+  .philosophy-right {
+    flex: none;
+    width: 100%;
+    height: 50vh;
+    min-height: 400px;
+    /* order: -1 УБРАТЬ - картинка будет снизу */
+  }
+
+  .philosophy-title {
+    font-size: 48px;
+  }
+
+  .philosophy-link {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-top: 30px;
+  }
+}
+
+/* Если хотите чтобы картинка была СВЕРХУ на планшетах: */
+/*
+@media (max-width: 1024px) {
+    .philosophy-right {
+        order: -1;  Раскомментировать для картинки сверху 
+    }
+}
+*/
+
+/* Мобильные (768px и меньше) */
+@media (max-width: 768px) {
+  .philosophy-left {
+    height: 60vh;
+    min-height: 500px;
+    padding: 40px 30px;
+    padding-top: 60px;
+    justify-content: flex-start;
+  }
+
+  .philosophy-right {
+    height: 40vh;
+    min-height: 300px;
+  }
+
+  .philosophy-title {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  .philosophy-description {
+    font-size: 17px;
+  }
+
+  .philosophy-link {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .philosophy-link::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Маленькие мобильные (480px и меньше) */
+@media (max-width: 480px) {
+  .philosophy-left {
+    height: 70vh;
+    min-height: 500px;
+    padding: 30px 20px;
+    padding-top: 50px;
+  }
+
+  .philosophy-right {
+    height: 30vh;
+    min-height: 250px;
+  }
+
+  .philosophy-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .philosophy-description {
+    font-size: 16px;
+  }
+}
