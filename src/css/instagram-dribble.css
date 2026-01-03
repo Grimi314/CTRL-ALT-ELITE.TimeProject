@@ -1,57 +1,78 @@
 /* Instagram & Dribble Section Styles -MOBILE */
-.instagram__container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: left;
-  padding: 0 20px;
-  text-align: left;
-  
-}
+
 .instagram-section {
   background-color: #FBE4FF;
-  font-family: Sen;
+  font-family: "Sen", sans-serif;
   opacity: 0;
   transform: translateY(40px);
   transition: 0.6s ease;
+  padding: 48px 0 0 0;
+  display: flex;
+  flex-direction: column;
 }
+
 .instagram-section.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
 .instagram-title {
-  width: 100%;
   text-align: left;
   font-size: 32px;
   font-weight: 700;
   color: #181823;
-  margin-top: 48px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  vertical-align: middle;
+  margin-bottom: 16px;
 }
+
 .instagram-description {
   color: #5B6876;
-  margin-top: 16px;
+  max-width: 320px;
+  margin-bottom: 125.75px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
 }
+
 .instagram-link {
-  text-decoration: underline;
-  text-decoration-color: #8491A0;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
+  position: relative;
   color: #181823;
   font-weight: 400;
   font-size: 16px;
-  display: block;
-  margin: 125.75px 0 51px 0;
-  line-height: 150%;
-  align-self: flex-start;
-  text-align: left;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 48px;
+  transition: color 0.3s ease,
+    font-weight 0.3s ease;
+}
+.mob-desktop-text,
+.tablet-text {
+  position: relative;
+  display: inline-block;
+}
+.mob-desktop-text::after,
+.tablet-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+
+  width: 100%;
+  height: 1px;
+  background-color: #8491A0;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .instagram-link.hovered {
   color: #d331e2;
-  font-weight: bold;
+  font-weight: 700;
+}
+
+.instagram-link.hovered .mob-desktop-text::after,
+.instagram-link.hovered .tablet-text::after {
+  background-color: #d331e2;
+  transform: scaleX(1);
 }
 .tablet-text {
   display: none;
@@ -66,18 +87,12 @@
 
 .dribble-section {
   background-color: black;
-  padding: 0 20px;
-  font-family: Sen;
-}
-.dribble__container {
+  padding: 64px 0 64px 0;
+  font-family: "Sen", sans-serif;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: left;
-  margin: 0;
-  text-align: left;
-
+  flex-direction: column;
 }
+
 
 .dribble-title {
   font-weight: 700;
@@ -85,7 +100,8 @@
   color: #FFFFFF;
   line-height: 100%;
   vertical-align: middle;
-  margin-top: 64px;
+  margin-bottom: 24px;
+
 }
 
 .dribble-description {
@@ -93,7 +109,8 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
-  margin-top: 24px;
+  margin-bottom: 40px;
+  max-width: 320px;
 }
 
 .dribble-link {
@@ -101,59 +118,62 @@
     font-size: 16px;
     line-height: 150%;
     color: #FFFFFF;
-    text-decoration: underline;
-    text-decoration-color: #8491A0;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 1px;
-    margin-top: 40px;
-    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-bottom: 64px;
+    transition: color 0.3s ease,
+      font-weight 0.3s ease;
+    position: relative;
 }
 
-.dribble-link.hovered {
-  color: #c21df4;
-  font-weight: bold;
-  text-decoration-color: #c21df4;
-  
+.dribble-link::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+
+  background-color: #8491A0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
 }
+.dribble-link.hovered::after {
+  background-color: #FF57A0;
+  transform: scaleX(1);
+}
+
 
 .line-wrapper {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
+  margin-top: 64px;
 }
 
-.line-image {
+.line-svg {
   display: block;
+  width: 100%;
   height: 36px;
-  position: relative;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  overflow: hidden;
+}
+.line-bg {
+  fill: #181823;
 }
 
-.dot {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  background-color: #5B6876;
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  margin-top: 56px;
+.line-svg circle {
+  fill: #5B6876;
+  transition: fill 0.3s ease;
+}
+.line-wrapper:hover circle {
+  fill: #ded5df;
+}
+.picture-wrapper picture {
+  display: block;
 }
 
-.line-wrapper > .dot:nth-of-type(1) {
-  left: 16px;
+.picture-wrapper {
+  position: relative; 
+  display: inline-block;
 }
-.line-wrapper > .dot:nth-of-type(2) {
-  left: calc(16px + 12px + 6px);
-}
-.line-wrapper > .dot:nth-of-type(3) {
-  left: calc(16px + (12px + 6px) * 2);
-}
+
 
 .web-image {
   display: block;
@@ -182,36 +202,33 @@
   margin-top: 0;
 }
 
+
+
 /* Instagram & Dribble Section Styles -TABLET */
 
 @media (min-width: 768px) {
-  .instagram__container, .dribble__container {
-    justify-content: flex-start;
-    padding: 0 40px;
+  .instagram-section {
+    padding: 0;
   }
-  .instagram-row {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    gap: 0;
+ .instagram-row {
+      display: flex;
+      justify-content: space-between;
   }
 .instagram__container {
-  flex: 0 0 384px;
-  max-width: 384px;
   width: 100%;
 }
 
 .instagram-title {
     font-size: 55px;
+    margin-bottom: 24px;
+    padding-top: 80px;
 }
 .instagram-description {
-  margin-top: 24px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 150%;
+  margin-bottom: 133px;
+  max-width: 304px;
 }
 .instagram-link {
-  margin-top: 133px;
+  margin: 0;
 }
 .mob-desktop-text {
   display: none;
@@ -221,49 +238,37 @@
   display: inline;
   
 }
-.line-image {
-  border-top: 8px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+.dribble-section {
+  padding: 80px 0;
 }
+
 .web-image {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
+.dribble-description {
+  max-width: 688px;
+}
+.dribble-link {
+  margin-bottom: 120px;
+}
+.line-wrapper {
+  margin-top: 120px;
+}
+
 }
 /* Instagram & Dribble Section Styles -DESKTOP */
 
 @media (min-width: 1440px) {
-  .instagram-row {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    gap: 0;
-    min-height: 100vh;
-  }
-
-
+  
   .instagram__container {
-    flex: 0 0 50vw;
-    width: 50vw;
-    max-width: none !important;
-    height: 600px;
-    background-color: #FBE4FF;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    padding: 0 72px;
+  }
+  .instagram-description {
+    max-width: 576px;
   }
 
-.instagram-content {
-    width: 100%;
-    max-width: 720px;
-    box-sizing: border-box;
-    padding: 48px 40px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+
   .mob-desktop-text {
     display: inline;
   }
@@ -272,30 +277,15 @@
     display: none;
   }
 
-  .instagram-media {
-    flex: 0 0 50vw;
-    width: 50vw;
-    max-width: none;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-
-  .instagram-media picture,
-  .instagram-media img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-  }
-
-  .dribble__container {
-    padding: 120px 182px;
-  }
+.dribble-section {
+  padding: 120px 0;
+}
   .dribble-description {
-    margin-right: 440px;
+    max-width: 636px;
+  }
+  
+  .dribble-link {
+    margin-bottom: 120px;
   }
   .web-image {
     width: 100%;
