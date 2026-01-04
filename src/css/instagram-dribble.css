@@ -6,7 +6,6 @@
   opacity: 0;
   transform: translateY(40px);
   transition: 0.6s ease;
-  padding: 48px 0 0 0;
   display: flex;
   flex-direction: column;
 }
@@ -16,12 +15,19 @@
   transform: translateY(0);
 }
 
+.instagram-content {
+    padding: 48px 20px;
+}
+.container {
+    padding: 0;
+}
 .instagram-title {
   text-align: left;
   font-size: 32px;
   font-weight: 700;
   color: #181823;
   margin-bottom: 16px;
+  line-height: 100%;
 }
 
 .instagram-description {
@@ -40,7 +46,6 @@
   font-size: 16px;
   text-decoration: none;
   display: inline-block;
-  margin-bottom: 48px;
   transition: color 0.3s ease,
     font-weight 0.3s ease;
 }
@@ -56,11 +61,11 @@
   left: 0;
   bottom: -3px;
 
-  width: 100%;
+  width: 128px;
   height: 1px;
   background-color: #8491A0;
 
-  transform: scaleX(0);
+  transform: scaleX(1);
   transform-origin: left;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -87,10 +92,11 @@
 
 .dribble-section {
   background-color: black;
-  padding: 64px 0 64px 0;
+  padding: 64px 0;
   font-family: "Sen", sans-serif;
   display: flex;
   flex-direction: column;
+  opacity: 1;
 }
 
 
@@ -98,7 +104,7 @@
   font-weight: 700;
   font-size: 55px;
   color: #FFFFFF;
-  line-height: 100%;
+  line-height: 120%;
   vertical-align: middle;
   margin-bottom: 24px;
 
@@ -123,6 +129,7 @@
     transition: color 0.3s ease,
       font-weight 0.3s ease;
     position: relative;
+    display: inline-block;
 }
 
 .dribble-link::after {
@@ -130,12 +137,12 @@
   content: "";
   left: 0;
   bottom: -4px;
-  width: 100%;
+  width: 171px;
   height: 1px;
 
   background-color: #8491A0;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  transform: scaleX(0);
+  transform: scaleX(1);
   transform-origin: left;
 }
 .dribble-link.hovered::after {
@@ -151,18 +158,18 @@
 
 .line-svg {
   display: block;
-  width: 100%;
+  width: 320px;
   height: 36px;
 }
 .line-bg {
   fill: #181823;
 }
 
-.line-svg circle {
+.line-svg .line-dot {
   fill: #5B6876;
   transition: fill 0.3s ease;
 }
-.line-wrapper:hover circle {
+.line-wrapper:hover .line-dot {
   fill: #ded5df;
 }
 .picture-wrapper picture {
@@ -207,21 +214,24 @@
 /* Instagram & Dribble Section Styles -TABLET */
 
 @media (min-width: 768px) {
+    .container {
+        padding-right: 0;
+    }
   .instagram-section {
     padding: 0;
   }
  .instagram-row {
       display: flex;
-      justify-content: space-between;
+      gap: 40px;
   }
 .instagram__container {
   width: 100%;
+
 }
 
 .instagram-title {
     font-size: 55px;
     margin-bottom: 24px;
-    padding-top: 80px;
 }
 .instagram-description {
   margin-bottom: 133px;
@@ -229,6 +239,10 @@
 }
 .instagram-link {
   margin: 0;
+}
+.tablet-text::after {
+    width: 116px;
+    bottom: -4px;
 }
 .mob-desktop-text {
   display: none;
@@ -252,23 +266,27 @@
 .dribble-link {
   margin-bottom: 120px;
 }
-.line-wrapper {
-  margin-top: 120px;
-}
 
+.line-svg {
+    width: 688px;
+}
 }
 /* Instagram & Dribble Section Styles -DESKTOP */
 
 @media (min-width: 1440px) {
-  
-  .instagram__container {
-    padding: 0 72px;
-  }
+.container {
+        padding-right: 0;
+    }
+.instagram-content {
+    padding: 120px 0 0 0;
+}
+    .instagram-row {
+        gap: 72px;
+    }
   .instagram-description {
     max-width: 576px;
+    margin-bottom: 134px;
   }
-
-
   .mob-desktop-text {
     display: inline;
   }
@@ -276,7 +294,9 @@
   .tablet-text {
     display: none;
   }
-
+.dribble__container {
+    padding: 0 182px;
+}
 .dribble-section {
   padding: 120px 0;
 }
@@ -284,12 +304,12 @@
     max-width: 636px;
   }
   
-  .dribble-link {
-    margin-bottom: 120px;
-  }
   .web-image {
     width: 100%;
     max-width: 1076px;
+  }
+  .line-svg {
+    width: 1076px;
   }
         
     }
