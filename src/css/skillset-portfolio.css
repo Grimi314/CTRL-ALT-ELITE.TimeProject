@@ -1,13 +1,70 @@
+* {
+	box-sizing: border-box;
+}
+
+.container-zero {
+	margin: 0 auto;
+	max-width: 360px;
+}
+
+/* skillset section */
+
 .skillset {
-    padding: 64px 0 64px;
+	padding: 64px 0 64px;
 }
 
 .skillset-title {
-    font-size: 32px;
-    color: #fff;
+	font-size: 32px;
+	color: #fff;
+	margin-bottom: 15px;
 }
 
 .skillset-text {
-    font-size: 18px;
-    color: #8491a0;
+	font-size: 18px;
+	color: #8491a0;
+	margin-bottom: 69px;
+	line-height: 150%;
 }
+
+.skillset-subtitle {
+	font-size: 24px;
+	color: #fff;
+	margin-bottom: 12px;
+}
+
+.skillset-description {
+	color: #8491a0;
+	line-height: 150%;
+}
+.skillset-list {
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+}
+
+.skillset-icon {
+	margin-bottom: 24px;
+}
+
+/* noname section */
+
+.logo-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.logo-item {
+	flex-basis: 50%;
+	min-height: 140px;
+	border: 1px solid #181823;
+	position: relative;
+}
+
+.logo-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* portfolio section */
