@@ -1,0 +1,117 @@
+.work-experience {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 120px 0 144px 0;
+}
+
+/* .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+} */
+
+.work-experience-header {
+    max-width: 689px;
+    margin-bottom: 80px;
+}
+
+.work-experience-label {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #a0a3aa;
+    margin-bottom: 16px;
+}
+
+.work-experience-title {
+    font-size: 55px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* ===== Grid ===== */
+.work-experience-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+}
+
+/* ===== Card ===== */
+.experience-card {
+    position: relative;
+}
+
+.experience-card-number {
+    display: block;
+    font-size: 117px;
+    font-weight: 700;
+    line-height: 1;
+    color: #8491A0;
+    margin-bottom: 24px;
+}
+
+.experience-card-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.experience-card-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #a0a3aa;
+}
+
+/* ===== colors ===== */
+.experience-cardcompany-google {
+    color: #3ccf91;
+}
+
+.experience-cardcompany-facebook {
+    color: #4fa3ff;
+}
+
+.experience-cardcompany-dribbble {
+    color: #ff5fa2;
+}
+
+
+/* ===== Responsive ===== */
+
+
+@media (max-width: 1440px) {
+    .work-experience-header {
+        margin-bottom: 72px;
+    }
+
+    .work-experience-list {
+        grid-template-columns: (1fr);
+        gap: 24px;
+    }
+
+    .work-experience-title {
+        font-weight: 700;
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-experience {
+        padding: 80px 0;
+    }
+
+    .work-experience-header {
+        max-width: 688px;
+    }
+
+    .work-experience-title {
+        font-size: 32px;
+    }
+
+    .work-experience-list {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
