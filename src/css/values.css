@@ -56,7 +56,7 @@ border-color: blue;
 
 .image-container-section-value{
 background-color: #181823;
-background-image: url(/img/Values/values-bg-mobile.jpg);
+background-image: url(/img/Values/values-bg-mobile.webp);
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -65,11 +65,11 @@ width: 360px;
 
 
   @media screen and (min-resolution: 1x) {
-    background-image: url(/img/Values/values-bg-mobile.jpg);
+    background-image: url(/img/Values/values-bg-mobile.webp);
   }
 
     @media screen and (min-resolution: 2x) {
-      background-image: url(/img/Values/values-bg-mobile@2x.jpg);
+      background-image: url(/img/Values/values-bg-mobile@2x.webp);
     }
 }
 
@@ -103,17 +103,17 @@ width: 360px;
  
 
     .image-container-section-value {
-      background-image: url(/img/Values/values-bg-tablet.jpg);
+      background-image: url(/img/Values/values-bg-tablet.webp);
    
       height: 600px;
       width: 384px;
 
      @media screen and (min-resolution: 1x) {
-        background-image: url(/img/Values/values-bg-tablet.jpg);
+        background-image: url(/img/Values/values-bg-tablet.webp);
       }
         
       @media screen and (min-resolution: 2x) {
-        background-image: url(/img/Values/values-bg-tablet@2x.jpg);
+        background-image: url(/img/Values/values-bg-tablet@2x.webp);
       }
     }
 }
@@ -144,17 +144,17 @@ width: 360px;
   
   
     .image-container-section-value {
-      background-image: url(/img/Values/values-bg-desktop.jpg);
+      background-image: url(/img/Values/values-bg-desktop.webp);
   
       height: 600px;
       width: 720px;
   
       @media screen and (min-resolution: 1x) {
-        background-image: url(/img/Values/values-bg-desktop.jpg);
+        background-image: url(/img/Values/values-bg-desktop.webp);
       }
   
       @media screen and (min-resolution: 2x) {
-        background-image: url(/img/Values/values-bg-desktop@2x.jpg);
+        background-image: url(/img/Values/values-bg-desktop@2x.webp);
       }
     }
 
