@@ -2,11 +2,6 @@
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .container-zero {
   margin: 0 auto;
   max-width: 360px;
@@ -23,13 +18,15 @@ img {
   font-size: 32px;
   color: #fff;
   margin-bottom: 15px;
+  padding-top: 15px;
 }
 
+.skillset-beginner {
+  margin-bottom: 69px;
+}
 .skillset-text {
   font-size: 18px;
   color: #8491a0;
-  margin-bottom: 69px;
-  line-height: 150%;
 }
 
 .skillset-subtitle {
@@ -40,7 +37,6 @@ img {
 
 .skillset-description {
   color: #8491a0;
-  line-height: 150%;
 }
 .skillset-list {
   display: flex;
@@ -50,6 +46,7 @@ img {
 
 .skillset-icon {
   margin-bottom: 24px;
+  display: block;
 }
 
 /* noname section */
@@ -113,4 +110,54 @@ img {
 .portfolio-description {
   font-size: 18px;
   color: #8491a0;
+}
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  /* skillset section */
+  .skillset {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .skillset-title {
+    margin-bottom: 24px;
+    font-size: 55px;
+  }
+
+  .skillset-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+  }
+
+  .skillset-item {
+    flex-basis: calc((100% - 24px) / 2);
+    padding-right: 48px;
+  }
+  /* noname section */
+  .container-zero {
+    max-width: 768px;
+  }
+  /* portfolio section */
+  .portfolio {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .portfolio-title {
+    font-size: 55px;
+  }
+}
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+  .portfolio {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .skillset-beginner {
+    max-width: 416px;
+  }
+  .skillset-text {
+    padding-right: 48px;
+  }
 }
