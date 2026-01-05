@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+.skillset-title,
+.portfolio-title {
+  line-height: 1.2;
+}
+
 .container-zero {
   margin: 0 auto;
   max-width: 360px;
@@ -72,6 +77,10 @@
 
 /* portfolio section */
 
+.portfolio-link {
+  display: none;
+}
+
 .portfolio {
   padding-top: 64px;
   padding-bottom: 70px;
@@ -95,7 +104,9 @@
   padding: 40px 32px;
 }
 
-.portfolio-list {
+.portfolio > .container,
+.portfolio-left-list,
+.portfolio-right-list {
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -122,6 +133,7 @@
   .skillset-title {
     margin-bottom: 24px;
     font-size: 55px;
+    padding-top: 0px;
   }
 
   .skillset-list {
@@ -150,14 +162,76 @@
 }
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
-  .portfolio {
+  .skillset {
     padding-top: 120px;
     padding-bottom: 120px;
   }
   .skillset-beginner {
     max-width: 416px;
+    flex-shrink: 0;
+    margin-bottom: 0px;
   }
   .skillset-text {
     padding-right: 48px;
+  }
+
+  .skillset > .container {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  /* noname section */
+  .container-zero {
+    max-width: 1440px;
+  }
+
+  .logo-item {
+    flex-basis: calc(100% / 6);
+  }
+
+  .logo-icon {
+    width: 85px;
+    height: 30px;
+  }
+  /* portfolio section */
+  .portfolio {
+    padding-top: 120px;
+    padding-bottom: 153px;
+  }
+
+  .portfolio > .container,
+  .portfolio-left-list,
+  .portfolio-right-list {
+    gap: 24px;
+  }
+
+  .portfolio-left-side,
+  .portfolio-right-side {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio > .container {
+    flex-direction: row;
+  }
+
+  .portfolio-title,
+  .portfolio-description {
+    max-width: 572px;
+  }
+
+  .portfolio-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #5221e6;
+    padding: 24px 32px;
+    margin-top: 91px;
+    align-self: center;
   }
 }
