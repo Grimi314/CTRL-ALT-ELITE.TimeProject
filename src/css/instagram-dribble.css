@@ -1,8 +1,8 @@
 /* Instagram & Dribble Section Styles -MOBILE */
 
 .instagram-section {
-  background-color: #FBE4FF;
-  font-family: "Sen", sans-serif;
+  background-color: #fbe4ff;
+  font-family: 'Sen', sans-serif;
   opacity: 0;
   transform: translateY(40px);
   transition: 0.6s ease;
@@ -16,10 +16,10 @@
 }
 
 .instagram-content {
-    padding: 48px 20px;
+  padding: 48px 20px;
 }
-.container {
-    padding: 0;
+.instagram-container {
+  padding: 0;
 }
 .instagram-title {
   text-align: left;
@@ -31,7 +31,7 @@
 }
 
 .instagram-description {
-  color: #5B6876;
+  color: #5b6876;
   max-width: 320px;
   margin-bottom: 125.75px;
   font-weight: 400;
@@ -46,24 +46,24 @@
   font-size: 16px;
   text-decoration: none;
   display: inline-block;
-  transition: color 0.3s ease,
-    font-weight 0.3s ease;
+  transition: color 0.3s ease, font-weight 0.3s ease;
 }
 .mob-desktop-text,
 .tablet-text {
   position: relative;
   display: inline-block;
+  height: 100%;
 }
 .mob-desktop-text::after,
 .tablet-text::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -3px;
 
   width: 128px;
   height: 1px;
-  background-color: #8491A0;
+  background-color: #8491a0;
 
   transform: scaleX(1);
   transform-origin: left;
@@ -89,29 +89,26 @@
   max-width: 540px;
 }
 
-
 .dribble-section {
   background-color: black;
   padding: 64px 0;
-  font-family: "Sen", sans-serif;
+  font-family: 'Sen', sans-serif;
   display: flex;
   flex-direction: column;
   opacity: 1;
 }
 
-
 .dribble-title {
   font-weight: 700;
   font-size: 55px;
-  color: #FFFFFF;
+  color: #ffffff;
   line-height: 120%;
   vertical-align: middle;
   margin-bottom: 24px;
-
 }
 
 .dribble-description {
-  color: #8491A0;
+  color: #8491a0;
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
@@ -120,196 +117,167 @@
 }
 
 .dribble-link {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #FFFFFF;
-    text-decoration: none;
-    margin-bottom: 64px;
-    transition: color 0.3s ease,
-      font-weight 0.3s ease;
-    position: relative;
-    display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 64px;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+  position: relative;
+  display: inline-block;
 }
 
 .dribble-link::after {
   position: absolute;
-  content: "";
+  content: '';
   left: 0;
   bottom: -4px;
   width: 171px;
   height: 1px;
 
-  background-color: #8491A0;
+  background-color: #8491a0;
   transition: background-color 0.3s ease, transform 0.3s ease;
   transform: scaleX(1);
   transform-origin: left;
 }
 .dribble-link.hovered::after {
-  background-color: #FF57A0;
+  background-color: #ff57a0;
   transform: scaleX(1);
-}
-
-
-.line-wrapper {
-  position: relative;
-  margin-top: 64px;
-}
-
-.line-svg {
-  display: block;
-  width: 320px;
-  height: 36px;
-}
-.line-bg {
-  fill: #181823;
-}
-
-.line-svg .line-dot {
-  fill: #5B6876;
-  transition: fill 0.3s ease;
-}
-.line-wrapper:hover .line-dot {
-  fill: #ded5df;
-}
-.picture-wrapper picture {
-  display: block;
-}
-
-.picture-wrapper {
-  position: relative; 
-  display: inline-block;
-}
-
-
-.web-image {
-  display: block;
-  width: 100%;
-  max-width: 720px;
-  height: auto;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  overflow: hidden;
-  
 }
 
 .line-web-stack {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  width: 320px;
+  /* gap: 0; */
 }
 
 .line-wrapper {
-  margin-bottom: 0;
+  max-height: 36px;
+  position: relative;
+}
+
+.dribble-line-icon {
+  fill: #181823;
+  stroke: currentColor;
+}
+
+.dribble-cirle-container {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+
+  display: flex;
+  gap: 6px;
+}
+
+.dribble-icon-circle {
+  fill: #5b6876;
 }
 
 .web-image {
-  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
 }
-
-
 
 /* Instagram & Dribble Section Styles -TABLET */
 
 @media (min-width: 768px) {
-    .container {
-        padding-right: 0;
-    }
-  .instagram-section {
-    padding: 0;
+  .instagram-row {
+    display: flex;
+    gap: 40px;
   }
- .instagram-row {
-      display: flex;
-      gap: 40px;
+  .instagram-container {
+    padding-left: 40px;
   }
-.instagram__container {
-  width: 100%;
 
-}
+  .instagram-content {
+    padding: 80px 0;
+  }
 
-.instagram-title {
+  .instagram-title {
     font-size: 55px;
     margin-bottom: 24px;
-}
-.instagram-description {
-  margin-bottom: 133px;
-  max-width: 304px;
-}
-.instagram-link {
-  margin: 0;
-}
-.tablet-text::after {
+    line-height: 120%;
+  }
+  .instagram-description {
+    margin-bottom: 133px;
+    max-width: 304px;
+  }
+  .instagram-link {
+    margin: 0;
+  }
+  .tablet-text::after {
     width: 116px;
     bottom: -4px;
-}
-.mob-desktop-text {
-  display: none;
-  
-}
-.tablet-text {
-  display: inline;
-  
-}
-.dribble-section {
-  padding: 80px 0;
-}
+  }
+  .mob-desktop-text {
+    display: none;
+  }
+  .tablet-text {
+    display: inline-block;
+  }
+  .dribble-section {
+    padding: 80px 0;
+  }
 
-.web-image {
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-.dribble-description {
-  max-width: 688px;
-}
-.dribble-link {
-  margin-bottom: 120px;
-}
+  .web-image {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .dribble-description {
+    max-width: 688px;
+  }
+  .dribble-link {
+    margin-bottom: 120px;
+  }
 
-.line-svg {
+  .line-web-stack {
     width: 688px;
-}
+  }
 }
 /* Instagram & Dribble Section Styles -DESKTOP */
 
 @media (min-width: 1440px) {
-.container {
-        padding-right: 0;
-    }
-.instagram-content {
-    padding: 120px 0 0 0;
-}
-    .instagram-row {
-        gap: 72px;
-    }
+  .instagram-container {
+    padding-right: 0;
+    padding-left: 72px;
+  }
+  .instagram-content {
+    padding: 120px 0;
+  }
+  .instagram-row {
+    gap: 72px;
+  }
   .instagram-description {
     max-width: 576px;
     margin-bottom: 134px;
   }
   .mob-desktop-text {
-    display: inline;
+    display: inline-block;
+  }
+
+  .mob-desktop-text::after {
+    width: 125px;
   }
 
   .tablet-text {
     display: none;
   }
-.dribble__container {
+  .dribble-container {
     padding: 0 182px;
-}
-.dribble-section {
-  padding: 120px 0;
-}
+  }
+  .dribble-section {
+    padding: 120px 0;
+  }
   .dribble-description {
     max-width: 636px;
   }
-  
-  .web-image {
-    width: 100%;
-    max-width: 1076px;
-  }
-  .line-svg {
+  .line-web-stack {
     width: 1076px;
   }
-        
-    }
+}

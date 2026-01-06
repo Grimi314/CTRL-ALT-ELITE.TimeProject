@@ -2,6 +2,13 @@
 // Instagram Link Hover Effect + Click Counter
 // ===============================
 const instagramLink = document.querySelector('.instagram-link');
+const svgAccess = document.querySelector('.dribble-line-icon');
+const svgSource = svgAccess.querySelector('.dribble-line-source');
+const mobScreen = window.matchMedia('(max-width: 767px)');
+const tabScreen = window.matchMedia(
+  '(min-width: 768px) and (max-width: 1439px)'
+);
+const deskScreen = window.matchMedia('(min-width: 1440px)');
 
 if (instagramLink) {
   const spanMob = instagramLink.querySelector('.mob-desktop-text');
@@ -11,14 +18,15 @@ if (instagramLink) {
   const defaultTextTablet = spanTablet.textContent;
   const instagramHoverText = "Let's connect";
 
-     let instaClickCount = parseInt(localStorage.getItem('instagramClickCount')) || 0;
+  let instaClickCount =
+    parseInt(localStorage.getItem('instagramClickCount')) || 0;
 
   function updateInstaClickCount() {
     instaClickCount++;
     localStorage.setItem('instagramClickCount', instaClickCount);
     console.log(`Посилання Instagram було натиснуто ${instaClickCount} разів`);
-    }
-    
+  }
+
   instagramLink.addEventListener('mouseover', () => {
     spanMob.textContent = instagramHoverText;
     spanTablet.textContent = instagramHoverText;
@@ -30,7 +38,7 @@ if (instagramLink) {
     spanTablet.textContent = defaultTextTablet;
     instagramLink.classList.remove('hovered');
   });
-    instagramLink.addEventListener('click', () => {
+  instagramLink.addEventListener('click', () => {
     updateInstaClickCount();
   });
 }
@@ -43,7 +51,6 @@ const dribbleLink = document.querySelector('.dribble-link');
 if (dribbleLink) {
   const defaultTextDribble = dribbleLink.textContent;
   const dribbleHoverText = "Let's connect";
-
 
   let clickCount = parseInt(localStorage.getItem('dribbleClickCount')) || 0;
 
@@ -85,3 +92,23 @@ if (instagramSection) {
 
   reveal();
 }
+
+// function for change svg source and with
+
+function changeSvg() {
+  if (mobScreen.matches) {
+    svgAccess.setAttribute('width', '320');
+    svgSource.setAttribute('href', '/img/icon.svg#icon-dribbleline-mobile');
+  } else if (tabScreen.matches) {
+    svgAccess.setAttribute('width', '688');
+    svgSource.setAttribute('href', '/img/icon.svg#icon-dribbleline-tablet');
+  } else {
+    svgAccess.setAttribute('width', '1076');
+    svgSource.setAttribute('href', '/img/icon.svg#icon-dribbleline-desktop');
+  }
+}
+
+changeSvg();
+mobScreen.addEventListener('change', changeSvg);
+tabScreen.addEventListener('change', changeSvg);
+deskScreen.addEventListener('change', changeSvg);
