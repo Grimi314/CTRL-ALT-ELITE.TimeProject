@@ -1,161 +1,166 @@
-.section-philosophy{
-  background-color: #FFF3E4;
+.section-philosophy {
+  background-color: #fff3e4;
 }
 
-.philosophy-content{
-padding: 0;
+.philosophy-content {
+  padding: 0;
 }
 
-.philosophy-wrapper-text{
-  padding-bottom: 48px;
-  padding-top: 20px;
+.philosophy-wrapper-text {
+  /* padding-bottom: 48px;
+  padding-top: 20px; */
+  padding: 48px 20px;
 }
 
-.philosophy-title{
-font-weight: 700;
-font-size: 32px;
-color: #181823;
-margin-bottom: 24px;
+.philosophy-title {
+  font-weight: 700;
+  font-size: 32px;
+  color: #181823;
+  margin-bottom: 24px;
+  max-height: 30px;
 }
 
-.philosophy-description{
-margin-bottom: 90px;
-font-weight: 400;
-font-size: 18px;
-line-height: 1.5;
-color: #5b6876;
+.philosophy-description {
+  margin-bottom: 90px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #5b6876;
 }
-.philosophy-link{
-font-weight: 400;
-font-size: 16px;
-line-height: 1.5;
-color: #181823;
-position: relative;
-transition: background-color 0.3s, width 0.3s;
+.philosophy-link {
+  display: block;
+  padding-bottom: 3px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #181823;
+  position: relative;
+  transition: background-color 0.3s, width 0.3s;
 }
 
-.philosophy-link:hover{
+.philosophy-link:hover {
   color: blue;
 }
 
-.philosophy-link::after{
+.philosophy-link::after {
   content: '';
-    position: absolute;
-    width: 116px;
-    height: 0;
-    top: 100%;
-    left: 0;
-    border-bottom: 1px solid  #5b6876;
-  
-    transition: background-color 0.3s, width 0.3s;
+  position: absolute;
+  width: 116px;
+  height: 0;
+  top: 100%;
+  left: 0;
+  border-bottom: 1px solid #5b6876;
+
+  transition: background-color 0.3s, width 0.3s;
 }
 
-.philosophy-link:hover::after{
-border-color: blue;
+.philosophy-link:hover::after {
+  border-color: blue;
 }
 
-.image-container-section-value{
-background-color: #181823;
-background-image: url(/img/Values/values-bg-mobile.webp);
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-height: 450px;
-width: 360px;
-
+.image-container-section-value {
+  background-color: #181823;
+  background-image: url(/img/Values/values-bg-mobile.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 450px;
+  width: 360px;
 
   @media screen and (min-resolution: 1x) {
     background-image: url(/img/Values/values-bg-mobile.webp);
   }
 
-    @media screen and (min-resolution: 2x) {
-      background-image: url(/img/Values/values-bg-mobile@2x.webp);
-    }
+  @media screen and (min-resolution: 2x) {
+    background-image: url(/img/Values/values-bg-mobile@2x.webp);
+  }
 }
 
-
-@media screen and (min-width: 768px){
-  .philosophy-content{
+@media screen and (min-width: 768px) {
+  .philosophy-content {
     display: flex;
+    gap: 40px;
   }
 
-  .section-philosophy{
-    padding-left: 40px;
+  .section-philosophy {
+    /* padding-left: 40px; */
   }
 
-  .philosophy-wrapper-text{
+  .philosophy-wrapper-text {
     max-width: 384px;
-   padding: 80px 40px 80px  0;
+    padding: 80px 0 80px 40px;
   }
 
-  .philosophy-title{
+  .philosophy-title {
     font-size: 55px;
     max-width: 304px;
     max-height: 132px;
     line-height: 70px;
   }
 
-  .philosophy-description{
+  .philosophy-description {
     max-width: 304px;
     margin-bottom: 67px;
   }
 
- 
+  .philosophy-link {
+    padding-bottom: 4px;
+  }
 
-    .image-container-section-value {
+  .image-container-section-value {
+    background-image: url(/img/Values/values-bg-tablet.webp);
+
+    height: 600px;
+    width: 384px;
+
+    @media screen and (min-resolution: 1x) {
       background-image: url(/img/Values/values-bg-tablet.webp);
-   
-      height: 600px;
-      width: 384px;
-
-     @media screen and (min-resolution: 1x) {
-        background-image: url(/img/Values/values-bg-tablet.webp);
-      }
-        
-      @media screen and (min-resolution: 2x) {
-        background-image: url(/img/Values/values-bg-tablet@2x.webp);
-      }
     }
+
+    @media screen and (min-resolution: 2x) {
+      background-image: url(/img/Values/values-bg-tablet@2x.webp);
+    }
+  }
 }
 
-@media screen and (min-width: 1440px){
-  
-    .section-philosophy {
-      padding-left: 72px;
-    }
-  
-    .philosophy-wrapper-text {
-      max-width: 720px;
-      padding: 125px 72px 120px 0;
-    }
-  
-    .philosophy-title {
-     
-      max-width: 529px;
-      max-height: 66px;
-      margin-bottom: 35px;
-    }
-  
-    .philosophy-description {
-      max-width: 576px;
-      margin-bottom: 118px;
-    }
-  
-  
-  
-    .image-container-section-value {
+@media screen and (min-width: 1440px) {
+  .philosophy-content {
+    gap: 72px;
+  }
+
+  .section-philosophy {
+    /* padding-left: 72px; */
+  }
+
+  .philosophy-wrapper-text {
+    max-width: 720px;
+    padding: 120px 0 120px 72px;
+  }
+
+  .philosophy-title {
+    max-width: 529px;
+    max-height: 66px;
+    margin-bottom: 35px;
+  }
+
+  .philosophy-description {
+    max-width: 576px;
+    margin-bottom: 118px;
+  }
+
+  .image-container-section-value {
+    background-image: url(/img/Values/values-bg-desktop.webp);
+
+    height: 600px;
+    width: 720px;
+
+    @media screen and (min-resolution: 1x) {
       background-image: url(/img/Values/values-bg-desktop.webp);
-  
-      height: 600px;
-      width: 720px;
-  
-      @media screen and (min-resolution: 1x) {
-        background-image: url(/img/Values/values-bg-desktop.webp);
-      }
-  
-      @media screen and (min-resolution: 2x) {
-        background-image: url(/img/Values/values-bg-desktop@2x.webp);
-      }
     }
 
+    @media screen and (min-resolution: 2x) {
+      background-image: url(/img/Values/values-bg-desktop@2x.webp);
+    }
+  }
 }
