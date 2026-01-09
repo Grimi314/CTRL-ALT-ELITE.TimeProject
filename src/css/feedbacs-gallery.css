@@ -208,6 +208,11 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
+    max-width: 688px;
+  }
+
+  .gallery-photos-item {
+    width: calc((100% - 24px) / 2);
   }
 
   .gallery-photos-item:nth-child(2) {
@@ -253,5 +258,10 @@
 
   .gallery-list-order {
     max-width: 487px;
+  }
+
+  .gallery-list-photos {
+    flex-wrap: nowrap;
+    max-width: 1296px;
   }
 }

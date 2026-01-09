@@ -1,8 +1,8 @@
-.work-experience{
-    background-color: #000000;
-    color: #ffffff;
-    /* padding: 120px 0 144px 0; */
-    padding: 48px 0;
+.work-experience {
+  background-color: #000000;
+  color: #ffffff;
+  /* padding: 120px 0 144px 0; */
+  padding: 48px 0;
 }
 
 /* .container {
@@ -12,127 +12,149 @@
 } */
 
 .work-experience-header {
-    /* max-width: 689px; лишнє */
-    /* margin-bottom: 80px; має бути 40*/
-    margin-bottom: 40px
+  /* max-width: 689px; лишнє */
+  /* margin-bottom: 80px; має бути 40*/
+  margin-bottom: 40px;
 }
 
 .work-experience-label {
-    font-weight: 700;
-    font-size: 16px;
-    max-width: 159px;
-    line-height: 1.5;
-    /* font-size: 12px; неправильні роміри і не додала жирність шрифту  */
-    /* letter-spacing: 0.15em;  не потрібно задавати якщо немає на мвкеті  */
-    text-transform: uppercase;
-    color: #a0a3aa;
-    margin-bottom: 8px;
-    /* margin-bottom: 16px;  має бути 8*/
+  font-weight: 700;
+  font-size: 16px;
+  /* max-width: 159px; */
+  max-width: 156px;
+  line-height: 1.5;
+  /* font-size: 12px; неправильні роміри і не додала жирність шрифту  */
+  /* letter-spacing: 0.15em;  не потрібно задавати якщо немає на мвкеті  */
+  text-transform: uppercase;
+  color: #a0a3aa;
+  margin-bottom: 8px;
+  /* margin-bottom: 16px;  має бути 8*/
 }
 
 .work-experience-title {
-    font-size: 32px;
-    /* font-size: 55px;vнеправильні розміри  */
-    line-height: 1.2;
-    font-weight: 700;
-    color: #ffffff;
+  font-size: 32px;
+  /* font-size: 55px;vнеправильні розміри  */
+  line-height: 1.2;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 /* ===== Grid ===== */
 .work-experience-list {
-    display: grid;
-    grid-template-columns: (1fr);
-    /* grid-template-columns: repeat(3, 1fr); */
-    gap: 40px;
+  display: grid;
+  grid-template-columns: (1fr);
+  /* grid-template-columns: repeat(3, 1fr); */
+  gap: 40px;
 }
 
 /* ===== Card ===== */
 .experience-card {
-    position: relative;
+  position: relative;
 }
 
 .experience-card-number {
-    display: block;
-    font-size: 117px;
-    /* font-weight: 700; */
-    font-weight: 400;
-    line-height: 1;
-    color: #8491A0;
-    margin-bottom: 24px;
+  /* display: block; */
+  font-size: 117px;
+  /* font-weight: 700; */
+  font-weight: 400;
+  line-height: 1;
+  color: #8491a0;
+  /* margin-bottom: 24px; */
+  height: 141px;
+  display: flex;
+  align-items: center;
 }
 
 .experience-card-title {
-    font-size: 24px;
-    font-weight: 700;
-    /* font-weight: 600; */
-    line-height: 1.5;
-    /* margin-bottom: 12px; */
-    margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  /* font-weight: 600; */
+  line-height: 1.5;
+  /* margin-bottom: 12px; */
+  margin-bottom: 16px;
 }
 
 .experience-card-description {
-    font-weight: 400;  
-    font-size: 16px;
-    /* line-height: 1.6; і не забувай вагу шрифту вказуазувати  */
-    line-height: 1.5;
-    color: #a0a3aa;
+  font-weight: 400;
+  font-size: 16px;
+  /* line-height: 1.6; і не забувай вагу шрифту вказуазувати  */
+  line-height: 1.5;
+  color: #a0a3aa;
 }
 
 /* ===== colors ===== */
 .experience-cardcompany-google {
-    color: #3ccf91;
+  color: #3ccf91;
 }
 
 .experience-cardcompany-facebook {
-    color: #4fa3ff;
+  color: #4fa3ff;
 }
 
 .experience-cardcompany-dribbble {
-    color: #ff5fa2;
+  color: #ff5fa2;
 }
-
 
 /* ===== Responsive ===== */
 
 /* напевно це більше моя помилка що я не пояснив але ми мали робити mobil first верстку  */
+@media (min-width: 768px) {
+  .work-experience {
+    padding: 80px 0;
+  }
 
-@media (min-width: 1440px) {
-    .work-experience{
-        padding: 120px 0 144px 0;
-    }
-    .work-experience-header {
-        margin-bottom: 72px;
-    }
+  .work-experience-header {
+    /* max-width: 688px; */
+  }
 
-    .work-experience-list {
-        grid-template-columns: repeat(3, 1fr);
-        /* grid-template-columns: (1fr); */
-        gap: 64px;
-    }
+  .work-experience-title {
+    font-size: 55px;
+    max-width: 688px;
+  }
 
-    .work-experience-title {
-        font-weight: 700;
-        font-size: 55px;
-    }
+  .work-experience-list {
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: 1fr; */
+    gap: 24px;
+  }
+
+  .experience-card-title {
+    margin-bottom: 24px;
+    max-width: 197px;
+  }
+  .experience-card-description {
+    max-width: 197px;
+  }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
+  .work-experience {
+    /* padding: 120px 0 144px 0; */
+    padding: 120px 0;
+  }
 
-    .work-experience {
-        padding: 80px 0;
-    }
+  .work-experience-label {
+    max-width: 158px;
+  }
 
-    .work-experience-header {
-        max-width: 688px;
-    }
+  .work-experience-title {
+    margin-bottom: 40px;
+    max-width: 690px;
+    font-weight: 700;
+    font-size: 55px;
+  }
 
-    .work-experience-title {
-        font-size: 55px;
-    }
+  .work-experience-list {
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: (1fr); */
+    gap: 64px;
+  }
 
-    .work-experience-list {
-        grid-template-columns: repeat(3, 1fr);
-        /* grid-template-columns: 1fr; */
-        gap: 24px;
-    }
+  .experience-card-title {
+    max-width: 339px;
+  }
+
+  .experience-card-description {
+    max-width: 368px;
+  }
 }
