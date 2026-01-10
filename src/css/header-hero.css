@@ -267,10 +267,8 @@ color: #fff;
     }
 
     .wrapper-section-hero {
-        position: absolute;
         top: 70%;
         left: 72%;
-        transform: translate(-50%, -50%);
     }
 
     .title-section-hero {
@@ -292,11 +290,10 @@ color: #fff;
         background-color: #181823;
         width: 900px;
         height: 900px;
+        right: 0;
+        top: 0;
+        z-index: 0; 
         position: absolute;
-        top: 53%;
-        left: 69%;
-        transform: translate(-50%, -50%);
-        z-index: 0;
     }
 
 }
