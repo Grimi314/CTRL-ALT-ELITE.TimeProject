@@ -277,8 +277,7 @@ color: #fff;
         font-size: 78px;
         max-height: 282px;
         max-width: 738px;
-        line-height: 70px;
-
+        line-height: 70px
     }
 
     .span-section-hero {
@@ -286,7 +285,6 @@ color: #fff;
     }
 
     .text-section-hero {
-
         width: 738px;
     }
 
@@ -296,9 +294,9 @@ color: #fff;
         height: 900px;
         position: absolute;
         top: 53%;
-        z-index: 0;
         left: 69%;
         transform: translate(-50%, -50%);
+        z-index: 0;
     }
 
 }
