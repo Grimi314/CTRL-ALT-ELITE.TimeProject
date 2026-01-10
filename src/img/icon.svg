@@ -36,4 +36,10 @@
 <symbol id="icon-dribble-circle" viewBox="0 0 32 32">
 <path d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
 </symbol>
+
+<symbol id="icon-Group-65" viewBox="0 0 32 32">
+<path fill="#000" style="fill: var(--color1, #000)" d="M0 0h32v32h-32v-32z"></path>
+<path fill="#c4c4c4" style="fill: var(--color2, #c4c4c4)" d="M4 8h24v4h-24v-4z"></path>
+<path fill="#c4c4c4" style="fill: var(--color2, #c4c4c4)" d="M10.667 18.667h17.333v4h-17.333v-4z"></path>
+</symbol>
 </defs></svg>
