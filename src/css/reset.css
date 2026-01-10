@@ -24,7 +24,17 @@ a {
 }
 
 button {
-  cursor: pointer;
+  background: none;
+  background-color: transparent; /* Ensures transparent background */
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer; /* Makes it clear it's clickable */
+  font: inherit; /* Inherit font from the body or parent element */
+  color: inherit; /* Inherit text color */
+  -webkit-appearance: none; /* Corrects styling issues in some Webkit/iOS browsers */
+  -moz-appearance: none;
+  appearance: none;
 }
 
 img {
