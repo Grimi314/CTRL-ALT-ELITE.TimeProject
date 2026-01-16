@@ -1,48 +1,45 @@
-const withBase = path => {
-  const base = import.meta.env.BASE_URL;
-  return `${base}${path.replace(/^\/+/, '')}`;
-};
+
 const galleryData = {
   italy: [
     {
       alt: 'italy alley',
       desktop:
-        './img/feedbacs-gallery/gallery/italy/italy-first-desktop.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-first-desktop-2x.webp 2x',
+        '/img/feedbacs-gallery/gallery/italy/italy-first-desktop.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-first-desktop-2x.webp 2x',
       tablet:
-        './img/feedbacs-gallery/gallery/italy/italy-first-tablet.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-first-tablet-2x.webp 2x',
+        '/img/feedbacs-gallery/gallery/italy/italy-first-tablet.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-first-tablet-2x.webp 2x',
       mobile:
-        './img/feedbacs-gallery/gallery/italy/italy-first-mobile.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-first-mobile-2x.webp 2x',
-      img: './img/feedbacs-gallery/gallery/italy/italy-first-desktop.webp',
+        '/img/feedbacs-gallery/gallery/italy/italy-first-mobile.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-first-mobile-2x.webp 2x',
+      img: '/img/feedbacs-gallery/gallery/italy/italy-first-desktop.webp',
     },
     {
       alt: 'venice gondola',
       desktop:
-        './img/feedbacs-gallery/gallery/italy/italy-second-desktop.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-second-desktop-2x.webp 2x',
+        '/img/feedbacs-gallery/gallery/italy/italy-second-desktop.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-second-desktop-2x.webp 2x',
       tablet:
-        './img/feedbacs-gallery/gallery/italy/italy-second-tablet.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-second-tablet-2x.webp 2x',
+        '/img/feedbacs-gallery/gallery/italy/italy-second-tablet.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-second-tablet-2x.webp 2x',
       mobile:
-        './img/feedbacs-gallery/gallery/italy/italy-second-mobile.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-second-mobile-2x.webp 2x',
-      img: './img/feedbacs-gallery/gallery/italy/italy-second-desktop.webp',
+        '/img/feedbacs-gallery/gallery/italy/italy-second-mobile.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-second-mobile-2x.webp 2x',
+      img: '/img/feedbacs-gallery/gallery/italy/italy-second-desktop.webp',
     },
     {
       alt: 'italy caffee',
       desktop:
-        './img/feedbacs-gallery/gallery/italy/italy-third-desktop.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-third-desktop-2x.webp 2x',
+        '/img/feedbacs-gallery/gallery/italy/italy-third-desktop.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-third-desktop-2x.webp 2x',
       tablet:
-        './img/feedbacs-gallery/gallery/italy/italy-third-tablet.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-third-tablet-2x.webp 2x',
+        '/img/feedbacs-gallery/gallery/italy/italy-third-tablet.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-third-tablet-2x.webp 2x',
       mobile:
-        './img/feedbacs-gallery/gallery/italy/italy-third-mobile.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-third-mobile-2x.webp 2x',
-      img: './img/feedbacs-gallery/gallery/italy/italy-third-desktop.webp',
+        '/img/feedbacs-gallery/gallery/italy/italy-third-mobile.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-third-mobile-2x.webp 2x',
+      img: '/img/feedbacs-gallery/gallery/italy/italy-third-desktop.webp',
     },
     {
       alt: 'italy mountains',
       desktop:
-        './img/feedbacs-gallery/gallery/italy/italy-fourth-desktop.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-fourth-desktop-2x.webp 2x',
+        '/img/feedbacs-gallery/gallery/italy/italy-fourth-desktop.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-fourth-desktop-2x.webp 2x',
       tablet:
-        './img/feedbacs-gallery/gallery/italy/italy-fourth-tablet.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-fourth-tablet-2x.webp 2x',
+        '/img/feedbacs-gallery/gallery/italy/italy-fourth-tablet.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-fourth-tablet-2x.webp 2x',
       mobile:
-        './img/feedbacs-gallery/gallery/italy/italy-fourth-mobile.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-fourth-mobile-2x.webp 2x',
-      img: './img/feedbacs-gallery/gallery/italy/italy-fourth-desktop.webp',
+        '/img/feedbacs-gallery/gallery/italy/italy-fourth-mobile.webp    1x,/img/feedbacs-gallery/gallery/italy/italy-fourth-mobile-2x.webp 2x',
+      img: '/img/feedbacs-gallery/gallery/italy/italy-fourth-desktop.webp',
     },
   ],
   australia: [
@@ -87,90 +84,46 @@ const galleryData = {
       img: '/img/feedbacs-gallery/gallery/australia/australia-fourth-desktop.webp',
     },
   ],
-  india: [
+  india: [ 
     {
       alt: 'india spices',
-      desktop: `${withBase(
-        'img/feedbacs-gallery/gallery/india/india-first-desktop.webp'
-      )} 1x, ${withBase(
-        'img/feedbacs-gallery/gallery/india/india-first-desktop-2x.webp'
-      )} 2x`,
-      tablet: `${withBase(
-        'img/feedbacs-gallery/gallery/india/india-first-tablet.webp'
-      )} 1x, ${withBase(
-        'img/feedbacs-gallery/gallery/india/india-first-tablet-2x.webp'
-      )} 2x`,
-      mobile: `${withBase(
-        'img/feedbacs-gallery/gallery/india/india-first-mobile.webp'
-      )} 1x, ${withBase(
-        'img/feedbacs-gallery/gallery/india/india-first-mobile-2x.webp'
-      )} 2x`,
-      img: withBase(
-        'img/feedbacs-gallery/gallery/india/india-first-desktop.webp'
-      ),
+      desktop:
+        '/img/feedbacs-gallery/gallery/india/india-first-desktop.webp    1x,/img/feedbacs-gallery/gallery/india/india-first-desktop-2x.webp 2x',
+      tablet:
+        '/img/feedbacs-gallery/gallery/india/india-first-tablet.webp    1x,/img/feedbacs-gallery/gallery/india/india-first-tablet-2x.webp 2x',
+      mobile:
+        '/img/feedbacs-gallery/gallery/india/india-first-mobile.webp    1x,/img/feedbacs-gallery/gallery/india/india-first-mobile-2x.webp 2x',
+      img: '/img/feedbacs-gallery/gallery/india/india-first-desktop.webp',
     },
     {
       alt: 'india tample',
-      desktop: `${withBase(
-        'img/feedbacs-gallery/gallery/india/india-second-desktop.webp'
-      )} 1x, ${withBase(
-        'img/feedbacs-gallery/gallery/india/india-second-desktop-2x.webp'
-      )} 2x`,
-      tablet: `${withBase(
-        'img/feedbacs-gallery/gallery/india/india-second-tablet.webp'
-      )} 1x, ${withBase(
-        'img/feedbacs-gallery/gallery/india/india-second-tablet-2x.webp'
-      )} 2x`,
-      mobile: `${withBase(
-        'img/feedbacs-gallery/gallery/india/india-second-mobile.webp'
-      )} 1x, ${withBase(
-        'img/feedbacs-gallery/gallery/india/india-second-mobile-2x.webp'
-      )} 2x`,
-      img: withBase(
-        'img/feedbacs-gallery/gallery/india/india-second-desktop.webp'
-      ),
+      desktop:
+        '/img/feedbacs-gallery/gallery/india/india-second-desktop.webp    1x,/img/feedbacs-gallery/gallery/india/india-second-desktop-2x.webp 2x',
+      tablet:
+        '/img/feedbacs-gallery/gallery/india/india-second-tablet.webp    1x,/img/feedbacs-gallery/gallery/india/india-second-tablet-2x.webp 2x',
+      mobile:
+        '/img/feedbacs-gallery/gallery/india/india-second-mobile.webp    1x,/img/feedbacs-gallery/gallery/india/india-second-mobile-2x.webp 2x',
+      img: '/img/feedbacs-gallery/gallery/india/india-second-desktop.webp',
     },
     {
       alt: 'india valley',
-      desktop: `${withBase(
-        'img/feedbacs-gallery/gallery/india/india-third-desktop.webp'
-      )} 1x, ${withBase(
-        'img/feedbacs-gallery/gallery/india/india-third-desktop-2x.webp'
-      )} 2x`,
-      tablet: `${withBase(
-        'img/feedbacs-gallery/gallery/india/india-third-tablet.webp'
-      )} 1x, ${withBase(
-        'img/feedbacs-gallery/gallery/india/india-third-tablet-2x.webp'
-      )} 2x`,
-      mobile: `${withBase(
-        'img/feedbacs-gallery/gallery/india/india-third-mobile.webp'
-      )} 1x, ${withBase(
-        'img/feedbacs-gallery/gallery/india/india-third-mobile-2x.webp'
-      )} 2x`,
-      img: withBase(
-        'img/feedbacs-gallery/gallery/india/india-third-desktop.webp'
-      ),
+      desktop:
+        '/img/feedbacs-gallery/gallery/india/india-third-desktop.webp    1x,/img/feedbacs-gallery/gallery/india/india-third-desktop-2x.webp 2x',
+      tablet:
+        '/img/feedbacs-gallery/gallery/india/india-third-tablet.webp    1x,/img/feedbacs-gallery/gallery/india/india-third-tablet-2x.webp 2x',
+      mobile:
+        '/img/feedbacs-gallery/gallery/india/india-third-mobile.webp    1x,/img/feedbacs-gallery/gallery/india/india-third-mobile-2x.webp 2x',
+      img: '/img/feedbacs-gallery/gallery/india/india-third-desktop.webp',
     },
     {
       alt: 'india river and boat',
-      desktop: `${withBase(
-        'img/feedbacs-gallery/gallery/india/india-fourth-desktop.webp'
-      )} 1x, ${withBase(
-        'img/feedbacs-gallery/gallery/india/india-fourth-desktop-2x.webp'
-      )} 2x`,
-      tablet: `${withBase(
-        'img/feedbacs-gallery/gallery/india/india-fourth-tablet.webp'
-      )} 1x, ${withBase(
-        'img/feedbacs-gallery/gallery/india/india-fourth-tablet-2x.webp'
-      )} 2x`,
-      mobile: `${withBase(
-        'img/feedbacs-gallery/gallery/india/india-fourth-mobile.webp'
-      )} 1x, ${withBase(
-        'img/feedbacs-gallery/gallery/india/india-fourth-mobile-2x.webp'
-      )} 2x`,
-      img: withBase(
-        'img/feedbacs-gallery/gallery/india/india-fourth-desktop.webp'
-      ),
+      desktop:
+        '/img/feedbacs-gallery/gallery/india/india-fourth-desktop.webp    1x,/img/feedbacs-gallery/gallery/india/india-fourth-desktop-2x.webp 2x',
+      tablet:
+        '/img/feedbacs-gallery/gallery/india/india-fourth-tablet.webp    1x,/img/feedbacs-gallery/gallery/india/india-fourth-tablet-2x.webp 2x',
+      mobile:
+        '/img/feedbacs-gallery/gallery/india/india-fourth-mobile.webp    1x,/img/feedbacs-gallery/gallery/india/india-fourth-mobile-2x.webp 2x',
+      img: '/img/feedbacs-gallery/gallery/india/india-fourth-desktop.webp',
     },
   ],
   brazil: [
