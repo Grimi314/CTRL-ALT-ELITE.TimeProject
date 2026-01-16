@@ -99,13 +99,13 @@ if (instagramSection) {
 function changeSvg() {
   if (mobScreen.matches) {
     svgAccess.setAttribute('width', '320');
-    svgSource.setAttribute('href', `${spritePath}#icon-dribbleline-mobile`);
+    svgSource.setAttribute('href', '#icon-dribbleline-mobile');
   } else if (tabScreen.matches) {
     svgAccess.setAttribute('width', '688');
-    svgSource.setAttribute('href', `${spritePath}#icon-dribbleline-tablet`);
+    svgSource.setAttribute('href', '#icon-dribbleline-tablet');
   } else {
     svgAccess.setAttribute('width', '1076');
-    svgSource.setAttribute('href', `${spritePath}#icon-dribbleline-desktop`);
+    svgSource.setAttribute('href', '#icon-dribbleline-desktop');
   }
 }
 
