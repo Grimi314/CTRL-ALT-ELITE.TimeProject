@@ -1,7 +1,6 @@
 // ===============================
 // Instagram Link Hover Effect + Click Counter
 // ===============================
-const spritePath = `${import.meta.env.BASE_URL}img/icon.svg`;
 const instagramLink = document.querySelector('.instagram-link');
 const svgAccess = document.querySelector('.dribble-line-icon');
 const svgSource = svgAccess.querySelector('.dribble-line-source');
@@ -99,13 +98,13 @@ if (instagramSection) {
 function changeSvg() {
   if (mobScreen.matches) {
     svgAccess.setAttribute('width', '320');
-    svgSource.setAttribute('href', '#icon-dribbleline-mobile');
+    svgSource.setAttribute('href', '/img/icon.svg#icon-dribbleline-mobile');
   } else if (tabScreen.matches) {
     svgAccess.setAttribute('width', '688');
-    svgSource.setAttribute('href', '#icon-dribbleline-tablet');
+    svgSource.setAttribute('href', '/img/icon.svg#icon-dribbleline-tablet');
   } else {
     svgAccess.setAttribute('width', '1076');
-    svgSource.setAttribute('href', '#icon-dribbleline-desktop');
+    svgSource.setAttribute('href', '/img/icon.svg#icon-dribbleline-desktop');
   }
 }
 
