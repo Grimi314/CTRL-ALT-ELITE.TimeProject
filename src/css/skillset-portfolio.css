@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+}
+
+.skillset-title,
+.portfolio-title {
+  line-height: 1.2;
+}
+
+.container-zero {
+  margin: 0 auto;
+  max-width: 360px;
+}
+
+/* skillset section */
+
+.skillset {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.skillset-title {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.skillset-beginner {
+  margin-bottom: 48px;
+  padding-top: 14px;
+  padding-bottom: 21px;
+}
+.skillset-text {
+  font-size: 18px;
+  color: #8491a0;
+}
+
+.skillset-subtitle {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.skillset-description {
+  color: #8491a0;
+}
+.skillset-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.skillset-icon {
+  margin-bottom: 24px;
+  display: block;
+  fill: #5221e6;
+}
+
+.skillset-stroke-icon {
+  stroke: #5221e6;
+  margin-bottom: 24px;
+}
+
+/* noname section */
+
+.logo-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo-item {
+  flex-basis: 50%;
+  min-height: 140px;
+  border: 1px solid #181823;
+  position: relative;
+}
+
+.logo-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #8491a0;
+}
+
+/* portfolio section */
+
+.portfolio-link {
+  display: none;
+}
+
+.portfolio {
+  padding-top: 64px;
+  padding-bottom: 70px;
+}
+
+.portfolio-text {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #8491a0;
+  margin-bottom: 8px;
+}
+
+.portfolio-title {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 80px;
+}
+
+.portfolio-wrapper {
+  background-color: #181823;
+  padding: 40px 32px;
+}
+
+.portfolio > .container,
+.portfolio-left-list,
+.portfolio-right-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.portfolio-subtitle {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 13px;
+}
+
+.portfolio-description {
+  font-size: 18px;
+  color: #8491a0;
+}
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  /* skillset section */
+  .skillset {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .skillset-title {
+    margin-bottom: 24px;
+    font-size: 55px;
+  }
+
+  .skillset-beginner {
+    padding: 0;
+  }
+
+  .skillset-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+  }
+
+  .skillset-item {
+    flex-basis: calc((100% - 24px) / 2);
+    padding-right: 48px;
+  }
+  /* noname section */
+  .container-zero {
+    max-width: 768px;
+  }
+  /* portfolio section */
+  .portfolio {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .portfolio-title {
+    font-size: 55px;
+  }
+}
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+  .skillset {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .skillset-beginner {
+    max-width: 416px;
+    flex-shrink: 0;
+    margin-bottom: 0px;
+  }
+  .skillset-text {
+    padding-right: 48px;
+  }
+
+  .skillset > .container {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .another-size-icon {
+    width: 32px;
+  }
+  /* noname section */
+  .container-zero {
+    max-width: 1440px;
+  }
+
+  .logo-item {
+    flex-basis: calc(100% / 6);
+  }
+
+  .logo-icon {
+    width: 85px;
+    height: 30px;
+  }
+
+  .logo-icon.first-icon {
+    height: 30px;
+  }
+
+  .logo-icon.second-icon {
+    width: 85px;
+    height: 30px;
+  }
+
+  .logo-icon.fourth-icon {
+    width: 20px;
+  }
+
+  /* portfolio section */
+  .portfolio {
+    padding-top: 120px;
+    padding-bottom: 153px;
+  }
+
+  .portfolio > .container,
+  .portfolio-left-list,
+  .portfolio-right-list {
+    gap: 24px;
+  }
+
+  .portfolio-left-side,
+  .portfolio-right-side {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio > .container {
+    flex-direction: row;
+  }
+
+  .portfolio-title,
+  .portfolio-description {
+    max-width: 572px;
+  }
+
+  .portfolio-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #5221e6;
+    padding: 24px 32px;
+    margin-top: 91px;
+    align-self: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease,
+      transform 0.2s ease;
+  }
+
+  .portfolio-link:hover {
+    background-color: #7b3cff;
+    box-shadow: 0 0 20px rgba(123, 60, 255, 0.6);
+    transform: translateY(-2px);
+  }
+}
